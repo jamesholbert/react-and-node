@@ -13,7 +13,7 @@ router.get('/cities', (req, res) => {
   res.json(cities)
 })
 app.use(router)
-app.set('port', (process.env.PORT || 3001))
+app.set('port', (process.env.PORT || 5000))
 app.listen(app.get('port'), () => {
   console.log(`Listening on ${app.get('port')}`)
 })

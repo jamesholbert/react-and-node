@@ -2,12 +2,15 @@
   "name": "front-and-back",
   "version": "1.0.0",
   "main": "index.js",
+  "repository": {},
   "license": "MIT",
   "dependencies": {
-    "concurrently": "^3.5.1"
+    "concurrently": "^3.1.0"
   },
   "scripts": {
-	  "install": "(cd client && yarn) && (cd server && yarn)",
-	  "start": "concurrently \"cd client && PORT=3000 yarn start\" \"cd server && PORT=5000 yarn start\""
-	}
+    "build": "concurrently \"cd client && yarn build\" \"cd server && yarn build\"",
+    "install": "(cd client && yarn) && (cd server && yarn)",
+    "start": "concurrently \"cd client && PORT=3000 yarn start\" \"cd server && PORT=3001 yarn start\"",
+    "start:prod": "cd server && yarn start:prod"
+  }
 }
